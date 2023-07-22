@@ -24,7 +24,10 @@ brew tap homebrew/cask-versions
 brew tap afutured/openai-translator
 
 binaries=(
-
+  cloudflared
+  bitwarden-cli
+  ffmpeg
+  mas
 )
 
 echo "Installing binaries..."
