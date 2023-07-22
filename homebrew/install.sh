@@ -11,14 +11,65 @@ then
   echo "  Installing Homebrew for you."
 
   # Install the correct homebrew for each OS type
-  if test "$(uname)" = "Darwin"
-  then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
-  then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
-  fi
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 fi
+
+# Upgrade homebrew
+echo "› brew update"
+brew update
+
+brew tap homebrew/cask-fonts
+brew tap homebrew/cask-versions
+brew tap afutured/openai-translator
+
+binaries=(
+
+)
+
+echo "Installing binaries..."
+brew install ${binaries[@]}
+
+apps=(
+  # apps
+  adguard
+  anki
+  google-chrome
+  warp
+  telegram
+  openai-translator
+  # system
+  clash-for-windows
+  hiddenbar
+  input-source-pro
+  monitorcontrol
+  appcleaner
+  openinterminal
+  raycast
+  the-unarchiver
+  # media
+  iina
+  plex
+  imazing
+  notion
+  # dev
+  visual-studio-code
+  orbstack
+)
+
+# Install apps to /Applications
+# Default is: /Users/$user/Applications
+echo "Installing apps..."
+brew install --cask --appdir="/Applications" ${apps[@]}
+
+fonts=(
+  font-ibm-plex-mono
+  font-sarasa-gothic
+)
+
+echo "Installing fonts..."
+brew install ${fonts[@]}
+
+brew cleanup
 
 exit 0
