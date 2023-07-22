@@ -778,14 +778,4 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Activity Monitor" \
-	"Calendar" \
-	"Contacts" \
-	"Dock" \
-	"Finder" \
-	"Google Chrome" \
-	"SystemUIServer" \
-	"Terminal"; do
-	killall "${app}" &> /dev/null
-done
-echo "Done. Note that some of these changes require a logout/restart to take effect."
+echo "Done. Please restart your device to take effect."
