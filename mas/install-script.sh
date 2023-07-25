@@ -21,7 +21,11 @@ if test ! $(which mas); then
   brew install mas
 fi
 
-apps=(
+mas signout
+
+read -p " - Please sign in your us App Store account then press any key to continue..." ignore
+
+apps_us=(
   985367838   # Microsoft Outlook
   462054704   # Microsoft Word
   462058435   # Microsoft Excel
@@ -31,12 +35,22 @@ apps=(
   823766827   # OneDrive
   922765270   # LiquidText
   497799835   # Xcode
-  441258766   # Magnet
-  724472954   # Manico
   1475387142  # Tailscale
 )
 
-echo "Installing apps from mas-cli..."
-mas install ${apps[@]}
+echo "Installing apps for us account from mas-cli..."
+mas install ${apps_us[@]}
+mas signout
+
+read -p " - Please sign in your cn App Store account then press any key to continue..." ignore
+
+apps_cn=(
+  441258766   # Magnet
+  724472954   # Manico
+)
+
+echo "Installing apps for cn account from mas-cli..."
+mas install ${apps_cn[@]}
+mas signout
 
 exit 0

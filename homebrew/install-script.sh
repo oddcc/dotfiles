@@ -39,7 +39,6 @@ apps=(
   anki
   google-chrome
   warp
-  telegram
   openai-translator
   # system
   clash-for-windows
