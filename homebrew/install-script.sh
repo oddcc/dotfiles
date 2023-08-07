@@ -49,6 +49,8 @@ apps=(
   openinterminal
   raycast
   the-unarchiver
+  scroll-reverser
+  cloudflare-warp
   # media
   iina
   plex
