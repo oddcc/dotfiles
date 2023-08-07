@@ -28,6 +28,7 @@ binaries=(
   bitwarden-cli
   ffmpeg
   mas
+  neovim
 )
 
 echo "Installing binaries..."
