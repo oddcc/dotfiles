@@ -50,8 +50,8 @@ apps=(
   openinterminal
   raycast
   the-unarchiver
-  scroll-reverser
   cloudflare-warp
+  mouse-fix
   # media
   iina
   plex
