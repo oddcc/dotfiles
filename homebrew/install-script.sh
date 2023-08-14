@@ -29,6 +29,7 @@ binaries=(
   ffmpeg
   mas
   neovim
+  jesseduffield/lazydocker/lazydocker
 )
 
 echo "Installing binaries..."
