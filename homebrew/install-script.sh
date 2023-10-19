@@ -52,7 +52,8 @@ apps=(
   raycast
   the-unarchiver
   cloudflare-warp
-  mouse-fix
+  caffeine
+  keyboard-cleaner
   # media
   iina
   plex
