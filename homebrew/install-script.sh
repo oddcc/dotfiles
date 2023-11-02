@@ -43,7 +43,6 @@ apps=(
   warp
   openai-translator
   # system
-  clash-for-windows
   hiddenbar
   input-source-pro
   monitorcontrol
@@ -54,6 +53,7 @@ apps=(
   cloudflare-warp
   caffeine
   keyboard-cleaner
+  clashx-pro
   # media
   iina
   plex
