@@ -20,7 +20,6 @@ echo "› brew update"
 brew update
 
 brew tap homebrew/cask-fonts
-brew tap homebrew/cask-versions
 brew tap afutured/openai-translator
 
 binaries=(
