@@ -21,6 +21,7 @@ brew update
 
 brew tap homebrew/cask-fonts
 brew tap afutured/openai-translator
+brew tap jesseduffield/lazydocker
 
 binaries=(
   cloudflared
